@@ -10,7 +10,7 @@ var heading = "<h%d>%s</h%d>"
 
 func makeHeader(level int, line string) (string, error) {
 	if level < 1 || level > 6 {
-		return "", fmt.Errorf("Unsupported nesting level: %d", level)
+		return "", fmt.Errorf("unsupported nesting level: %d", level)
 	}
 
 	return fmt.Sprintf(heading, level, strings.TrimSpace(line[level+1:]), level), nil
